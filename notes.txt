@@ -1,0 +1,272 @@
+Basic Coding Standards
+    - Naming Conventions
+        - do
+            - give meaningful names
+            - Conventions
+                Lower Camelcase
+                    dinesh
+                    getElementById
+                Upper Camelcase
+                    GetElementById
+                Lowercase
+                    getelementbyid
+                Uppercase
+                    GETELEMENTBYID
+                Snake Case
+                    get_element_by_id
+                Dash Case
+                    get-element-by-id
+        - don'ts
+            - never give names like
+                project1
+                project2
+                assignment1
+                assignment2
+                test1
+                practice1
+    - Code Indent
+        - 1 tab = 4 spaces
+
+Web Languages
+    - Markup
+        - Placeholder
+    - Scripting
+        - Client-side
+            - JavaScript
+            - ReactJs
+        - Server-side
+            - PHP
+            - NodeJs
+    - Programming
+        - Java
+        - Python
+        - .Net
+        - PHP
+
+HTML Tags (aka Elements aka Containers)
+    Syntax:
+        <...>
+            ....
+        </...>
+
+    - Paired
+        <TAGNAME> = opening of tag
+            ....
+        </TAGNAME> = closing of the tag
+
+    - Unpaired (Self Closing Tag)
+        <TAGNAME>
+        or
+        <TAGNAME /> => in frameworks
+
+    - Block
+        which occupies the entire of the parent container (regardless of the content)
+    - Inline
+        whatever the content size is, will be the container size as well
+
+Editor vs IDE (Integrated Development Environment)
+
+Deprecated
+    - marked for deletion and probably removed in the next version upgrade
+
+SEO
+    - Search Engine Optimization
+
+HTML Attributes
+    - Paired
+    - Unpaired (Self Closing)
+
+    - Core
+        id
+        class
+        style
+        title
+    - Generic
+        width
+        height
+        align
+        border
+        bgcolor
+        cellspacing
+        cellpadding
+    - Custom
+        data-<name of the attribute>
+
+A HREF
+    - filename
+    - folder/filename
+        - path
+            - absolute
+            - relative
+            - full path
+    - website link
+    - References ( # )
+
+HTML Measurement
+    %
+    px
+    
+Dimension
+    - height
+    - width
+
+Resolution
+    - dpi
+        dots per inch
+
+    - Low Res
+        - 30-40 dpi
+    - Medium Res
+        - 72-96 dpi
+    - High Res
+        - 300 dpi
+
+NOTES: 07-03-2023
+
+HTTP
+    - GET
+        ?txtUsername=sdfdsf
+        - whenever you have a question mark in your URL, then its called as "querystring"
+            ?name=value&name=value&name=value&name=value&name=value&name=value
+    - POST
+
+Encoding can be decoded and vice-versa, and its done by the software
+
+Encryption need not be always decrypted, because the logic is half system and half custom logic.
+
+
+NOTES: 08-03-2023
+
+Spacing
+    - margin
+    - padding
+
+Sizing
+    - width
+    - height
+
+Direction
+    - top
+    - right
+    - bottom
+    - left
+
+Measurement
+    - in HTML
+        - px
+        - %
+
+    - in CSS
+        - px
+        - %
+        - rem
+        - em
+        - pt
+        
+        - vw
+        - vh
+
+        - mm
+        - cm
+        - in
+        - pc
+
+    - initial
+    - inherit
+
+Colors
+    - Basic Colors
+        - white & black
+
+    - Supported?
+        - Millions
+
+    - CSS can be assigned/use colors?
+        - rgb
+            - red + green + blue
+                - % (0-100)
+                - values (0-255)
+
+            - rgb(%, %, %)
+        - rgba
+            - red + green + blue + alpha (aka opacity aka transparency)
+                rgba(%, %, %, %) (0-100% or 0-1)
+        - HEX
+            - 6 digit
+            - 3 digit
+        - HSL
+            - hue + saturation + lightness
+        - HSLA
+
+Font File Types
+    - ttf
+    - otf
+    - woff
+    - svg
+    - eot
+
+CDN
+    - Content Delivery Network
+
+NOTES: 09-03-2023
+
+Responsive
+    - Screen Sizes (Ranges)
+        - Client might choose
+        - OR you can be allowed to choose
+            - Guided Range
+                1 - 576px
+                576 - 768px
+                768 - 992px
+                992 - 1200px
+                1200 - 1400px
+            - Custom Range
+                600px
+                900px
+                1200px
+                1400- 1500px
+
+    - Breakpoints
+        xs = <576px
+        sm = >576px
+        md = >768px
+        lg = >992px
+        xl = >1200px
+        xxl = >1400px
+
+    - Measurement
+        < = max-width
+        > = min-width
+
+    - @media
+        @media only screen and (max-width: 576px) {
+
+        }
+        OR
+        @media (max-width:576px) {
+
+        }
+
+Positioning
+    - Test Case #1:
+        parent container set to relative
+            - all child containers set to relative
+                - test out spacing+direction properties
+                - test out direction properties
+            - all child containers set to absolute
+                - test out spacing+direction properties
+                - test out direction properties
+    - Test Case #1:
+        parent container set to absolute
+            - all child containers set to relative
+                - test out spacing+direction properties
+                - test out direction properties
+            - all child containers set to absolute
+                - test out spacing+direction properties
+                - test out direction properties
+    - Test Case #3:
+        parent container set to relative
+            - randomly set child container(s) set to relative and absolute
+                - test out spacing+direction properties
+                - test out direction properties
+            

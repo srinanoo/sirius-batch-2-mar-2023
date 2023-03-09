@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- External CSS / Styles -->
+    <!-- <link href="css/styles.css" rel="stylesheet"> -->
+
+    <!-- Internal CSS / Styles -->
+    <style>
+        /* @font-face {
+            font-family: 'Dinesh';
+            src: url('fonts/Phamelo.ttf');
+        } */
+        * {
+            box-sizing: border-box;
+        }
+        /* h1, div {
+            color: blue;
+        }
+        p {
+            color: yellow;
+        }
+        div.colorPink {
+            color: pink;
+            background-color: purple;
+        }
+        #textGreen {
+            color: green;
+        } */
+        /* div {
+            background-color: red;
+        }
+        span {
+            background-color: green;
+        }
+        p {
+            background-color: blue;
+        } */
+
+        /* nav {
+            background-color: purple;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: inline;
+            background-color: yellow;
+            padding: 10px;
+        }
+        section {
+            background-color: antiquewhite;
+        }
+        .cols {
+            display: inline ;
+            background-color: burlywood;
+            width: 33%;
+        } */
+
+        /* div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 20px;
+        } */
+
+        /* .fluid {
+            background-color: antiquewhite;
+            background-image: url('images/map-new.png');
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+            background: red url() no-repeat center fixed;
+            background-size:  cover;
+        } */
+        /* div {
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            font-variant: small-caps;
+            font-weight: bold;
+            font-size: 20px;
+
+            font: italic small-caps bold 20px/20px 'Courier New';
+        } */
+
+        /* .fluid {
+
+        } */
+
+        /* div > ul li > p {
+            color: red;
+        } */
+
+        /* .row > div {
+            width: 32%;
+            background-color: red;
+            display: inline-block;
+        } */
+
+        /* div ~ p {
+            color: red;
+        } */
+
+        /* a {
+            color: red;
+        }
+        a:hover {
+            color: yellow;
+            text-decoration: none;
+        }
+        p::first-letter {
+            font-size: 50px;
+            font-weight: bold;
+        } */
+
+        /* ul:first-child li:first-child {
+            font-weight: bold;
+            background-color: orange;
+        } */
+        /* ul:first-child li:nth-child(2) {
+            font-weight: bold;
+            background-color: blue;
+        } */
+        /* ul:first-child li:last-child {
+            font-weight: bold;
+            background-color: green;
+        } */
+
+        /* li[width="100"] {
+            color: red;
+        } */
+
+        /* .fb {
+            background-image: url('images/sprites.png');
+            width: 58px;
+            height: 58px;
+            background-position: bottom left;
+        }
+        .fb:hover {
+            background-image: url('images/sprites.png');
+            background-position: bottom left;
+        }
+
+        .rss {
+            background-image: url('images/sprites.png');
+            width: 58px;
+            height: 58px;
+            background-position: -58px bottom;
+        }
+        .rss:hover {
+            background-image: url('images/sprites.png');
+            background-position: -58px 58px;
+        }
+        .linkedin {
+            background-image: url('images/sprites.png');
+            width: 58px;
+            height: 58px;
+            background-position: -121px 0;
+        }
+        .linkedin:hover {
+            background-image: url('images/sprites.png');
+            background-position: -121px 58px;
+        }
+
+        .fb1 {
+            background-image: url('images/sprites.png');
+            height: 58px;
+            background-position: -180px 0;
+        }
+        .fb1:hover {
+            background-position: -180px 58px;
+        }
+
+        .bgSprites {
+            background-image: url('images/sprites.png');
+            height: 58px;
+            width: 58px;
+            background-position: -121px 0;
+        }
+        .bgSprites:hover {
+            background-position: -121px 58px;
+        } */
+
+        /* .floatLEFT {
+            background-color: red;
+            float: left;
+            width: 50%;
+        }
+        .floatRIGHT {
+            background-color: green;
+            float: right;
+            width: 50%;
+        }
+        p {
+            background-color: aqua;
+        }
+        .clearfix {
+            clear: both;
+        }
+        .cols {
+            float: left;
+            width: 33.33333333%;
+            padding-right: 10px;
+        }
+        .cols div {
+            background-color: red;
+        } */
+
+        div {
+            border: solid;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <img src="images/background.jpeg" alt="">
+    </div>
+    <div>
+        <img src="images/button.jpg" alt="">
+    </div>
+
+    <!-- <div class="row">
+        <div class="cols">
+            <div>Div </div>
+            <div>Div </div>
+        </div>
+        <div class="cols">
+            <div>Div </div>
+            <div>Div </div>
+        </div>
+        <div class="cols">
+            <div>Div </div>
+            <div>Div </div>
+        </div>
+        <div class="clearfix"></div>
+    </div> -->
+    
+
+    <!-- <div class="floatLEFT">
+        Div Container
+    </div>
+    <div class="floatRIGHT">
+        Div Container
+    </div>
+    <div class="clearfix"></div> -->
+
+    <!-- <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolorem temporibus autem id aspernatur magnam sequi, tempore praesentium eum ad ab officiis pariatur qui? Eos, optio alias. Quisquam, perferendis molestias!
+    </p> -->
+
+
+    <!-- <div class="bgSprites"></div>
+
+    <br><br>
+    <br><br><br><br>
+
+    <div class="fb1"></div>
+
+    <div class="fb"></div>
+    <div class="rss"></div>
+    <div class="linkedin"></div> -->
+    
+    <!-- <div width="300">
+        <i class="fa-brands fa-facebook"></i> Div Container
+    </div>
+
+    <p width="100">
+        Paragraph
+    </p>
+
+    <li width="100">
+        List Item
+    </li>
+
+    <h3>Heading 3</h3> -->
+
+    <!-- <ul>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <ul>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul> -->
+
+    <!-- <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium, fugit quibusdam quaerat nostrum beatae. Perferendis, deleniti. Repellat cupiditate totam est ipsum doloribus laudantium temporibus? Modi delectus nihil blanditiis illum!
+    </p>
+
+    <a href="">Click</a>
+
+    <div>
+        Div Container
+    </div>
+
+    <ul>
+        <li>
+            <p>Paragraph 3</p>
+        </li>
+    </ul>
+
+    <p>Paragraph 1</p>
+
+    <p>Paragraph 2</p> -->
+
+    <!-- <div class="row">
+        <div>
+            <div>Div</div>
+        </div>
+        <div>Div</div>
+        <div>Div</div>
+    </div> -->
+
+    <!-- <p>Paragraph 1</p>
+    <div>
+        <p>Paragraph 2</p>
+        <li>
+            <p>Paragraph 2.3</p>
+        </li>
+        <ul>
+            <li>
+                <p>Paragraph 2.0</p>
+            </li>
+            <li>
+                <div>
+                    <p>Paragraph 2.2</p>
+                </div>
+            </li>
+        </ul>
+        <p>Paragraph 2.1</p>
+    </div>
+
+    <p>Paragraph 3</p> -->
+
+
+
+
+    
+    <!-- <div class="fluid">
+        Lorem ipsum dolor.
+    </div> -->
+
+    <!-- <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Blog</li>
+            <li>Services</li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="cols">Column 1</div><div class="cols">Column 2</div><div class="cols">Column 3</div>
+    </section> -->
+
+    <!-- <div>Div Container</div>
+    <div>Div Container</div>
+
+    <span>Span Container</span>
+    <span>Span Container</span>
+
+    <p>Paragraph Container</p> -->
+    
+    <!-- <h1 id="textGreen" class="colorPink">CSS</h1> 
+
+    <div class="colorPink bgPurple">
+        Div Container
+    </div>
+
+    <p class="colorPink">
+        Paragraph Container
+    </p>
+
+    <div id="textGreen">
+        Div Container
+    </div>
+
+    <p>
+        Paragraph Container
+    </p>
+
+    <img src="images/button.jpg"> -->
+
+</body>
+</html>

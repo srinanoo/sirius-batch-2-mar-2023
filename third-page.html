@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+        }
+        .row1 {
+            background-color: red;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .row1 div:not(.clearfix) {
+            float: left;
+            width: 16.6666666%;
+            padding: 5px;
+        }
+        .clearfix {
+            clear: left;
+        }
+        .row2 {
+            background-color: yellow;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .row2 div:not(.clearfix) {
+            float: left;
+            width: 25%;
+            padding: 5px;
+        }
+        .row3 {
+            background-color: green;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .row3 div:not(.clearfix) {
+            float: left;
+            width: 33.33333333%;
+            padding: 5px;
+        }
+        .row4 {
+            background-color: blue;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .row4 div:not(.clearfix) {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .row1 div:not(.clearfix) {
+                width: 33.3333333%;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .row1 div:not(.clearfix), .row2 div:not(.clearfix) {
+                width: 50%;
+            }
+            .row3 div:not(.clearfix) {
+                width: 100%;
+            }
+            .row5 {
+                display: none;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="row1">
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="row2">
+        <div>
+            <img src="images/background.jpeg" alt="">
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt="">
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt="">
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt="">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="row3">
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="row4">
+        <div>
+            <img src="images/background.jpeg" alt="">
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt="">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="row5">
+        <div>
+            <img src="images/1e650f11-7d32-43fc-8d6e-5b15e5747558.jpg" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
