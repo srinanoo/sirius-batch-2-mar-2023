@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            max-width: 100%;
+        }
+        div.regular {
+            transition-property: height;
+            transition-duration: 5s;
+            transition-delay: 5s;
+
+            transition: width 5s 5s linear;
+        }
+        div.effect1, div.effect2, div.effect3, div.effect4, div.effect5, div.regular, div.rotate, div.scale, div.translate {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin-bottom: 20px;
+        }
+        div.effect1 {
+            transition-timing-function: linear;
+            transition-duration: 5s;
+        }
+        div.effect2 {
+            transition-timing-function: ease;
+            transition-duration: 5s;
+        }
+        div.effect3 {
+            transition-timing-function: ease-in;
+            transition-duration: 5s;
+        }
+        div.effect4 {
+            transition-timing-function: ease-out;
+            transition-duration: 5s;
+        }
+        div.effect5 {
+            transition-timing-function: ease-in-out;
+            transition-duration: 5s;
+        }
+        div.effect1:hover, div.effect2:hover, div.effect3:hover, div.effect4:hover, div.effect5:hover {
+            width: 300px;
+        }
+        div.regular:hover {
+            height: 200px;
+        }
+        div.rotate {
+            transition-property: transform;
+            transition-duration: 3s;
+        }
+        div.rotate:hover {
+            transform: rotate(-45deg);
+        }
+        div.scale img {
+            transition-property: transform;
+            transition-duration: 3s;
+        }
+        div.scale img:hover {
+            transform: scale(1.5, 1.5);
+        }
+        div.translate img {
+            transition-property: transform;
+            transition-duration: 3s;
+        }
+        div.translate img:hover {
+            transform: translate(-80px, -20px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="regular">
+        Div Container
+    </div>
+    
+    <div class="rotate">
+        Div Container
+    </div>
+
+    <div class="scale">
+        <img src="images/background.jpeg">
+    </div>
+
+    <div class="translate">
+        <img src="images/background.jpeg">
+    </div>
+
+    <div class="effect1">
+        Div Container
+    </div>
+    <div class="effect2">
+        Div Container
+    </div>
+    <div class="effect3">
+        Div Container
+    </div>
+    <div class="effect4">
+        Div Container
+    </div>
+    <div class="effect5">
+        Div Container
+    </div>
+
+</body>
+</html>

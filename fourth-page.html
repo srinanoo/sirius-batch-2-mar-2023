@@ -40,14 +40,162 @@
         div:hover img {
             z-index: -1;
         } */
+        /* .icon {
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            border: solid;
+            border-radius: 50%;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            background-color: aliceblue;
+            margin-top: -5px;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border: solid;
+            width: 150px;
+        }
+        .menu a {
+            color: black;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            padding: 5px 10px;
+        }
+        .menu li:hover {
+            background-color: gainsboro;
+        }
+        .iconLayer:hover + .menu {
+            display: inline-block;
+        }
+        .iconLayer {
+            width: 50px;
+            height: 60px;
+            background-color: aqua;
+        }
+        .menu:hover {
+            display: block;
+        } */
+
+        /* header {
+            background-color: beige;
+        }
+        header > div {
+            position: absolute;
+            width: 50%;
+            background-color: beige;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            border: solid;
+            border-radius: 50%;
+        }
+        nav ul {
+            list-style: none;
+            padding:0;
+        } */
+
+        * {
+            margin: 0;
+        }
+        img {
+            max-width: 100%;
+        }
+
+        header {
+            background-color: antiquewhite;
+        }
+        header > div {
+            width: 50%;
+            position: absolute;
+        }
+        header > div:last-child {
+            margin-left: 50%;
+        }
+        /* ul > li {
+            text-align: right;
+        } */
+        nav .menu, nav .icon {
+            position: absolute;
+            right: 15px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            border: solid;
+            border-radius: 50%;
+        }
+        .menu {
+            background-color: antiquewhite;
+        }
+        .menu a {
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            padding: 5px 10px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="div1">Div 1</div>
-    <div class="div2">Div 2</div>
-    <div class="div3">Div 3</div>
-    <div class="div4">Div 4</div>
+    <!-- <div>
+        <div class="iconLayer">
+            <div class="icon"></div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">My Orders</a></li>
+                <li><a href="#">My Wishlist</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    <header>
+        <div>
+            LOGO
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <div class="icon"></div>
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">My Orders</a></li>
+                                <li><a href="#">My Wishlist</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+        <!-- <div class="div1">Div 1</div>
+        <div class="div2">Div 2</div>
+        <div class="div3">Div 3</div>
+        <div class="div4">Div 4</div> -->
+
+    
 
     <!-- <div>
         <p>Paragraph content goes here...</p>

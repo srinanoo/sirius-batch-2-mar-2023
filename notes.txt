@@ -270,3 +270,32 @@ Positioning
                 - test out spacing+direction properties
                 - test out direction properties
             
+
+NOTES: 13-03-2023
+
+Flex
+    - child
+        - flex-grow
+        - flex-shrink
+        - flex-basis
+
+Minify
+    - styles.min.css
+    - scripts.min.js
+
+    - removing unwanted spaces and code Indent
+
+
+NOTES: 14-03-2023
+
+JavaScript
+    - Data Types
+        - number
+        - string
+        - boolean
+        - array
+        - object
+        - undefined
+        - NaN
+        - null
+        - Symbol

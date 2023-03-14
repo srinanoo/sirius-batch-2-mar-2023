@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .menu > div {
+            background-color: yellow;
+            padding: 10px;
+        }
+        .menu .dropdown {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 0, 0.315);
+            margin-top: 10px;
+            margin-left: -10px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: godown 300ms ease-in-out;
+            transform-origin: top center;
+        }
+        .menu .dropdown a {
+            text-decoration: none;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+        .menu > div:hover .dropdown {
+            display: block;
+        }
+
+        @keyframes godown {
+            0% {
+                transform: scaleY(0);
+                /* background: red; */
+            }
+            /* 30% {
+                transform: scaleY(1.5);
+                background: purple;
+            } */
+            80% {
+                transform: scaleY(1.1);
+                /* background: green; */
+            }
+            100% {
+                transform: scaleY(1);
+                /* background: pink; */
+            }
+        }
+
+        .flexMenu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flexMenu > div {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+        }
+        .flexDropDown {
+            display: none;
+            position: absolute;
+            background-color: antiquewhite;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: dropdown 500ms ease-in-out infinite both;
+            /* transform-origin: bottom center; */
+        }
+        .flexMenu > div:hover {
+            cursor: pointer;
+        }
+        .flexMenu > div:hover .flexDropDown {
+            display: block;
+        }
+        .flexDropDown a {
+            color: black;
+            text-decoration: none;
+            padding: 2px 5px;
+            display: inline-block;
+        }
+        @keyframes dropdown {
+            0% {
+                transform: scaleY(1);
+                background-color: red;
+            }
+            30% {
+                transform: scaleY(1.25);
+                background-color: green;
+            }
+            60% {
+                transform: scaleY(1.75);
+                background-color: aqua;
+            }
+            80% {
+                transform: scaleY(1.25);
+                background-color: black;
+                color: white;
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        .block {
+            height: 100px;
+            width: 200px;
+            border: solid;
+        }
+
+        .block div {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            animation: moveball 3s linear infinite alternate-reverse;
+            /* animation-play-state: paused; */
+        }
+        @keyframes moveball {
+            50% {
+                /* transform: translateX(180px); */
+                transform: translate(180px, 0);
+                /* transform: translateY(80px); */
+            }
+            65% {
+                transform: translate(180px, 80px);
+                /* transform: translateX(0); */
+                /* transform: translateY(80px);    */
+            }
+            85% {
+                transform: translate(0, 80px);
+            }
+            100% {
+                transform: translate(50px, 80px);
+                /* transform: translateX(0);
+                transform: translateY(80px); */
+                
+                /* transform: translateY(80px); */
+            }
+        }
+
+        .loader {
+            background-color: black;
+            height: 80px;
+            
+            width: 80px;
+            border-radius: 50%;
+        }
+        .loader div {
+            position: absolute;
+        }
+        .loader div:first-child {
+            height: 100px;
+            width: 5px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top-color: red;
+            border-left-color: red;
+            animation: loader 5s ease forwards;
+            transform-origin: left center;
+        }
+        .loader div:last-child {
+            height: 75px;
+            width: 75px;
+            margin-left: 2.5px;
+            margin-top: 2.5px;
+            border-radius: 50%;
+            background-color: aliceblue;
+            display: flex;
+            align-items: center;
+        }
+        @keyframes loader {
+            25% {
+                transform: rotate(90deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(240deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <div>Menu 1</div>
+        <div>Menu 2
+            <div class="dropdown">
+                <div><a href="">Sub Menu</a></div>
+                <div><a href="">Sub Menu</a></div>
+                <div><a href="">Sub Menu</a></div>
+                <div><a href="">Sub Menu</a></div>
+            </div>
+        </div>
+        <div>Menu 3</div>
+        <div>Menu 4</div>
+    </div>
+
+    <br><br>
+
+    <div class="flexMenu">
+        <div>Home</div>
+        <div>
+            About
+            <div class="flexDropDown">
+                <div><a href="#">Sub Menu 1</a></div>
+                <div><a href="#">Sub Menu 2</a></div>
+                <div><a href="#">Sub Menu 3</a></div>
+                <div><a href="#">Sub Menu 4</a></div>
+                <div><a href="#">Sub Menu 5</a></div>
+            </div>
+        </div>
+        <div>Blog</div>
+        <div>Services</div>
+        <div>Contact</div>
+    </div>
+
+    <br><br>
+
+    <div class="block">
+        <div></div>
+    </div>
+
+    <br><br>
+
+    <div class="loader">
+        <div></div>
+        <div>CONTENT</div>
+    </div>
+
+    <br><br>
+    
+</body>
+</html>
