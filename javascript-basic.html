@@ -5,8 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        * {
+            line-break: auto;
+        }
+        .card {
+            width: 25%;
+            float: left;
+        }
+        /* div div::before {
+            content: " \2709 ";
+        }
+        div div::after {
+            content: "";
+            background-image: url('images/close-1.png');
+            width: 20px;
+            height: 20px;
+        } */
+        .bg {
+            height: 200px;
+            background-image: url('images/background.jpeg');
+            background-repeat: no-repeat;
+        }
+        .bg div {
+            height: 100%;
+            background-color: rgb(5, 2, 2, 0.5);
+            /* opacity: 0.5; */
+            color: white;
+        }
+    </style>
 </head>
 <body>
+
+    <h1>JavaScript</h1>
+
+    <div class="bg">
+        <div>
+            Div Container
+        </div>
+    </div>
+
+    <!-- <ul>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+    </div> -->
+
+    <!-- <div id="res"></div> -->
+
+    <!-- <div>
+        DIV IS THE CONTENT GOES HERE...
+    </div> -->
 
 
     <!-- External JS -->
@@ -14,6 +75,7 @@
 
     <!-- Internal JS -->
     <script>
+        // use 'strict';
         // Internal 
 
         // document.write("This comes from DOM method");
@@ -25,11 +87,363 @@
         // i = 10;
 
         // 
-        var i = 10;
-        console.log(typeof(i));
+        // var i = 10;
+        // console.log(typeof(i));
 
-        i = "This is a string variable now";
-        console.log(typeof(i));
+        // i = "This is a string variable now";
+        // console.log(typeof(i));
+
+        // var a = 10; // global
+        // console.log(a, " - first call");
+        // function testFunc() {
+        //     console.log(a, " - inside function");
+        //     b = 20; // local scope
+        //     console.log(b, " - first call of b variable");
+        // }
+        // testFunc();
+        // // var b;
+        // console.log(b, " - outside function for variable b");
+
+        // var c;
+        // console.log(c, " - this is c's variable");
+
+        // var temp = 10;
+        // console.log(temp, " - temp");
+
+        // var temp = "this is a string";
+        // console.log(temp, " - temp");
+
+        // let temp1 = 10;
+        // console.log(temp1, " - temp1");
+
+        // let temp1 = "this is a string";
+        // console.log(temp1, " - temp1");
+
+        // for(var i=0; i<5; i++) {
+        //     console.log(i);
+        // }
+        // console.log(i, " - outside for loop");
+
+        // for(let j=0; j<5; j++) {
+        //     console.log(j);
+        // }
+        // console.log(j, " - outside for loop");
+
+        // const d = "string";
+        // const d; // not possible
+
+        // var a = 10;
+        // var b = 20;
+        // console.time();
+        // if(a > b) {
+        //     console.log("a is greater than b");
+        // } else {
+        //     // console.log("b is greater than a"); // not to be used
+        //     // or
+        //     // console.log("a is equal to b"); // not to be used
+        //     // or
+        //     // console.log("b is equal to a"); // not to be used
+        //     // or
+        //     // console.log("a is not equal to b"); // not to be used
+        //     // or
+        //     console.log("a is not greater than b");
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // (a > b) ? console.log("a is greater than b") : console.log("a is not greater than b");
+        // console.timeEnd();
+
+        // Conditional Statements
+        // var a = 10;
+        // var b = "10";
+        // console.time();
+        // if(a >= b) {
+        //     console.log("a is greater than or equal to b");
+        // } else if(a < b) {
+        //     console.log("a is lesser than b");
+        // } else if(a != b) {
+        //     console.log("a is not equal b");
+        // } 
+
+        // color = "white";
+        // switch(color) {
+        //     case "white":
+        //         console.log("This is white");
+        //         break;
+        //     case "black":
+        //         console.log("This is black");
+        //         break;
+        //     default:
+        //         console.log("This is neither black or white");
+        // }
+
+        // if(color=="white") {
+        //     console.log("this is white");
+        // } else if(color=="black") {
+        //     console.log("this is black");
+        // } else {
+        //     console.log("this is neither black or white");
+        // }
+
+        // Iterating a code block repeatedly based on a condition
+        // a = 1;
+        // while(a<=10) {  // 1<=10 2<=10... 9<=10 10<=10
+        //     console.log(++a);  // 12345678910
+        //     // ++a; // 23...10
+        // }
+
+        // a = 1; b = 5;
+        // while (a < 5) {
+        //     while (b > 0) {
+        //         console.log(a + " = "+ b);
+        //         a++;
+        //         b--;
+        //     }
+        // }
+
+        // a = 1; b = 5;
+        // while (a < 5) { // 1<5 1<5 2<5 3<5 4<5 5<5
+        //     if (b < 5) { // 5<5 4<5 3<5 2<5 1<5
+        //         a++; // 2345
+        //     }
+        //     b--; // 43210
+        //     console.log(a + " = " + b); // 1=4, 2=3, 3=2, 4=1, 5=0
+        // }
+        // 1 = 4, 2 = 3, 3 = 2, 4 = 1
+
+        // rows = 4;
+        // // <table border=1>
+        // //     <tr>
+        // //         <td></td>
+        // //     </tr>
+        // // </table>
+        // document.write("<table border=1>");
+        // while(rows>0) {
+        //     document.write("<tr>");
+        //     cols = 8;
+        //     while(cols>0) { // 5<0, 4<0, 3<0, 2<0, 1<0, 0<0
+        //         document.write("<td>" + cols + "</td>");
+        //         cols--;
+        //     }
+        //     document.write("</tr>");
+        //     rows--; // 4
+        // }
+        // document.write("</table>");
+
+        // ageOfPeople = [23, 45, 29, 15, 13, 28, 18, 60, 38];
+        // for(var i=0; i<ageOfPeople.length; i++) {
+        //     if(ageOfPeople[i]>=18) {
+        //         console.log(ageOfPeople[i]);
+        //     }
+        // }
+
+        // document.write("<table border=1>");
+        // for(i=0; i<rows; i++) {
+        //     document.write("<tr>");
+        //     for(j=0; j<cols; j++) { // 5<0, 4<0, 3<0, 2<0, 1<0, 0<0
+        //         document.write("<td>" + cols + "</td>");
+        //     }
+        //     document.write("</tr>");
+        // }
+        // document.write("</table>")
+
+        // employee = [1000, "Dinesh", true, "01/01/2023"];
+        // console.time();
+        // console.log("---- for loop -----"); 
+        // for(let i=0; i<employee.length; i++) {
+        //     // console.log(employee[i]);
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // console.log("---- for..in loop -----"); 
+        // for(let temp in employee) {
+        //     // console.log(employee[temp]);
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // console.log("---- for..of loop -----"); 
+        // for(let temp of employee) {
+        //     // console.log(temp);
+        // }
+        // console.timeEnd();
+
+        // obj = {
+        //     id: 1000,
+        //     active: true,
+        //     dateJoined: "01/01/2023",
+        //     name: "Dinesh",
+        //     marks: {
+        //         html: 12,
+        //         css: 34,
+        //         js: 34,
+        //         react: 56,
+        //         node: 67
+        //     },
+        //     avg: function(v1, v2, v3, v4) {
+        //         return (v1+v2+v3+v4)/4;
+        //     }
+            
+        // }
+        // function avg(p1, p2, p3, p4) {
+
+        // }
+        // console.log(obj.avg(1,2,3,4))
+        // // for(let temp in obj) {
+        // //     if(typeof obj[temp] == "object"){
+        // //         for(let temp1 in obj[temp]) {
+        // //             console.log(temp1 + " - " + obj[temp][temp1]);
+        // //         }
+        // //     } else {
+        // //         console.log(obj[temp]);
+        // //     }
+                
+        // // }
+
+        employee = [
+            {
+                id: 1,
+                name: "Name 1",
+                active: true,
+                subjects: ["HTML", "CSS", "JS"]
+            },
+            {
+                id: 2,
+                name: "Name 2",
+                active: false,
+                subjects: ["DS", "AI"]
+            },
+            {
+                id: 3,
+                name: "Name 3",
+                active: true,
+                subjects: ["HTML", "CSS"]
+            },
+            {
+                id: 4,
+                name: "Name 4",
+                active: false,
+                subjects: ["JS"]
+            }
+        ];
+
+        output = "";
+
+        // <div class="card">
+        //     <div>Id: 1</div>
+        //     <div>Name: Dinesh</div>
+        //     <div>Active: true</div>
+        //     <div>
+        //         <div>Subjects:</div>
+        //         <div>
+        //             JS
+        //             HTML
+        //             CSS
+        //             React
+        //         </div>
+        //     </div>
+        // </div>
+
+        // for(let val of employee) {
+        //     output += '<div class="card">';
+        //         output += '<div>Id: ' + val.id + "</div>";
+        //         output += '<div>Name: ' + val.name + "</div>";
+        //         output += '<div>Active: ' + val.active + "</div>";
+        //         output += '<div><div>Subjects:</div><div>';
+        //             for(let subjectsList of val.subjects) {
+        //                 output += subjectsList + "<br>";
+        //             }
+        //         output += '</div></div>';
+        //     output += '</div>';
+        // }
+
+        // // document.write(output);
+        // document.getElementById("res").innerHTML = output;
+
+        // Looping Controls
+        // ageOfPeople = [10, 8, 25, 36, 24, 48, 75, 31, 22, 18, 17, 20];
+        // counter=0;
+        // for(let i=0; i<ageOfPeople.length; i++) {
+        //     if(counter==5) break;
+        //     if(ageOfPeople[i]>=18 && counter<5) {
+        //         console.log(ageOfPeople[i]);
+        //         counter++;
+        //     }
+        //     console.log(i);
+        // }
+        // console.log(counter);
+
+        // Functions
+        // function testFunc(val1, val2=1, val3=1) { // function definition
+        //     // console.log("this is a function");
+        //     addition = val1 + val2 + val3;
+        //     return false;
+        // }
+        // temp = testFunc(1); // function invoking line
+        // console.log(temp);
+
+        // testFunc1 = function (val1, val2=1, val3=1) { // function definition
+        //     // console.log("this is a function");
+        //     addition = val1 + val2 + val3;
+        //     return false;
+        // }
+        // temp1 = testFunc1(1); // function invoking line
+        // console.log(temp1);
+
+        // let val1 = 10;
+        // let val2 = 20;
+        // (function(){
+        //     console.log("this is an Immediately invoked function");
+        //     console.log(val1 + val2);
+        // })(val1, val2);
+
+        // // Arrow Functions
+        // testFunc = (val1, val2=1, val3=1) => { // function definition
+        //     return val1 + val2 + val3;
+        // }
+        
+        // testFunc = (val1, val2=1, val3=1) => val1 + val2 + val3;
+
+        // testFunc = () => 10 + 10;
+
+        // testFunc = (val1) => 10 + val1;
+        // testFunc = val1 => 10 + val1;
+
+        // employee = [1000, "Dinesh", true];
+        // employee.forEach(callEmployee);
+        // function callEmployee(value, index, arr) {
+        //     console.log(value, " - ", index, " - ", arr);
+        // }
+
+        // employee.forEach(value => {
+        //     console.log(value);
+        // });
+
+        // names = ["naveen", "james", "zekkin", "abdul", "nachos", "don", "praveen", "shivani", "mahalakshmi"];
+        // namesConverted = names.map(v => v.toUpperCase());
+        // console.log(namesConverted);
+
+        // namesWithN = names.filter(v => v.charAt(0).toUpperCase()=="n".toUpperCase());
+        // console.log(namesWithN);
+
+        num = [15, 25, 63, 58, 92, 100];
+        // numRes = num.reduce((prevVal, Val) => prevVal+Val)/num.length;
+        // console.log(numRes);
+
+        // res = num.every(v=> v>=18);
+        // console.log(res);
+
+        // res1 = num.some(v=> v>=18);
+        // console.log(res1);
+        
+        // Value1 = prompt("Enter value 1");
+        // Value2 = prompt("Enter value 2");
+
+        // console.log(Value1+Value2);
+
+
     </script>
     <noscript>JS is disabled in the browser. Please enable it to execute the functionality.</noscript>
 </body>
