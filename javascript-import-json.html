@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+        }
+        .row, .row .card {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row .card {
+            width: 33.3333333%;
+            padding: 5px;
+            background-color: rgb(85, 85, 213);
+            color: white;
+        }
+        .row .card > div:first-child {
+            width: 20%;
+        }
+        .row .card > div:last-child {
+            width: 80%;
+        }
+        .row .card > div:first-child img {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Students</h1>
+
+    <div id="results"></div>
+
+    <script>
+        let students = [
+            {
+                "first_name": "Dinesh",
+                "last_name": "T",
+                "img": "images/background.jpeg",
+                "email": "test1@test.com"
+            }, 
+            {
+                "first_name": "Fouziya",
+                "last_name": "S",
+                "img": "images/background.jpeg",
+                "email": "test1@test.com"
+            }, 
+            {
+                "first_name": "Afnaan",
+                "last_name": "Y",
+                "img": "images/background.jpeg",
+                "email": "test1@test.com"
+            }, 
+            {
+                "first_name": "Deepak",
+                "last_name": "A",
+                "img": "images/background.jpeg",
+                "email": "test1@test.com"
+            }, 
+        ];
+
+        let output = '<div class="row">';
+
+        for(let temp of students) {
+            console.log(temp);
+            output += '<div class="card"><div>';
+            output += '<img src="'+temp.img+'" alt="'+temp.first_name+'">';
+            output += '</div><div><div>'+temp.first_name+' '+temp.last_name+'</div><div>'+temp.img+'</div></div></div>';
+        }
+        output += '</div>';
+
+        document.querySelector("#results").innerHTML = output;
+    </script>
+    
+</body>
+</html>

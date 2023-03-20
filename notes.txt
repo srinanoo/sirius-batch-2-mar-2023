@@ -317,3 +317,26 @@ Pseudo Elements
             ... content / container / child
             ::after => append
         </TAGNAME>
+
+
+NOTES: 16-03-2023
+
+JS Events
+    - Keyboard
+        keydown
+        keypress
+        keyup
+
+    - Mouse
+        mouseover
+        mouseout
+        mouseenter
+        mouseleave
+        mousemove
+    
+    - Other
+        click
+        dblclick
+        focus
+        blur
+        change

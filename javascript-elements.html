@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .colorRed {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="parentDiv">
+        <h3 id="h3" data-custom="test">Heading 3</h3>
+        <p id="p1">Paragraph Content</p>
+        <div id="div1">Div Container</div>
+    </div>
+
+    <br><br>
+
+    <input type="button" value="Click" id="btnClick">
+
+    <script>
+        document.getElementById("btnClick").addEventListener("click", ()=>{
+            let parentDiv = document.getElementById("parentDiv");
+            let h3 = document.getElementById("h3");
+            let p1 = document.getElementById("p1");
+            let div1 = document.getElementById("div1");
+
+            // p1.setAttribute("class", "colorRed");
+            p1.setAttribute("style", "background-color: red; color: white;")
+
+            div1.style.color = "white";
+            div1.style.backgroundColor = "red";
+            console.log(h3.getAttribute("id"), " h3 id");
+            console.log(h3.getAttribute("data-custom"), " h3 data-custom");
+
+            let newPara = document.createElement("p");
+            newPara.innerHTML = "This is a new <strong>Paragraph</strong>";
+            newPara.setAttribute("class", "colorRed");
+
+            let newH1 = document.createElement("h1");
+            newH1.innerText = "Heading 1";
+
+            parentDiv.append(newPara);
+            parentDiv.prepend(newH1);
+
+            let newButton = document.createElement("button");
+            newButton.innerHTML = "New Button";
+            newButton.setAttribute("style", "background-color: purple; color: pink");
+            newButton.setAttribute("id", "newButton");
+            newButton.addEventListener("click", () => {
+                console.log("New button is clicked");
+            });
+
+            parentDiv.append(newButton);
+
+            let newh4 = document.createElement("h4");
+            newh4.innerText = "Heading 4";
+
+            parentDiv.insertBefore(newh4, div1);
+        });
+    </script>
+    
+</body>
+</html>

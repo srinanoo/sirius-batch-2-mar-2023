@@ -8,67 +8,150 @@
 </head>
 <body>
 
-    <form name="frmLogin">
+    <!-- <form name="frmLogin">
         <input type="text" name="txtUsername" id="idUsername" class="clsInput" placeholder="Username:"><br>
         <input type="password" name="paPassword" id="idPassword" class="clsInput" placeholder="Password:"><br>
         <input type="button" value="Click" onclick="testFunc();">
-    </form>
+    </form> -->
+
+    <!-- <div id="div1" class="clsDiv">
+        Div Container Content
+    </div>
+    <div id="div2" class="clsDiv">
+        <strong>Div Container</strong> Content
+    </div> -->
+    <!-- <h3>Generate a Tabular Column</h3>
+    Enter Rows: <input type="number" id="rows"><br>
+    Enter Columns: <input type="number" id="cols"><br>
+    <br><br>
+    <input type="button" value="Click" id="btnClick">
+    <br><br>
+    <div id="results"></div> -->
+
+    <input type="button" value="Click" id="btnClick">
+    <input type="button" value="Open" id="btnOpen">
+    <input type="button" value="Delete" id="btnDelete">
     
     <script>
-        function testFunc() {
-            // console.log("this function is invoked by button click");
-
-            // old method
-                // document.<form name>.<form control name>.value
-                var txtUsername = document.frmLogin.txtUsername.value;
-                console.log(txtUsername);
-                var paPassword = document.frmLogin.paPassword.value;
-                console.log(paPassword);
-
-                // document.forms[0].<form control name>.value
-                var txtUsername1 = document.forms[0].txtUsername.value;
-                console.log(txtUsername1);
-                var paPassword1 = document.forms[0].paPassword.value;
-                console.log(paPassword1);
-
-            // traditional method
-                // document.getElementById(<id attribute>).value
-                var txtUsername2 = document.getElementById("idUsername").value;
-                console.log(txtUsername2);
-                var paPassword2 = document.getElementById("idPassword").value;
-                console.log(paPassword2);
-
-                // document.getElementsByClassName(<class attribute>)[].value
-                var txtUsername3 = document.getElementsByClassName("clsInput")[0].value;
-                console.log(txtUsername3);
-                var paPassword3 = document.getElementsByClassName("clsInput")[1].value;
-                console.log(paPassword3);
-
-                // document.getElementsByTagName(<name of the tag>)[].value
-                var txtUsername4 = document.getElementsByTagName("input")[0].value;
-                console.log(txtUsername4);
-                var paPassword4 = document.getElementsByTagName("input")[1].value;
-                console.log(paPassword4);
-
-                // document.getElementsByName(<name attribute>)[].value
-                var txtUsername5 = document.getElementsByName("txtUsername")[0].value;
-                console.log(txtUsername5);
-                var paPassword5 = document.getElementsByName("paPassword")[0].value;
-                console.log(paPassword5);
-
-            // modern methods
-                // document.querySelector(<selector>).value
-                var txtUsername6 = document.querySelector(".clsInput").value;
-                console.log(txtUsername6);
-                var paPassword6 = document.querySelector("#idPassword").value;
-                console.log(paPassword6);
-                
-                // document.querySelectorAll(<selector>)[].value
-                var txtUsername7 = document.querySelectorAll(".clsInput")[0].value;
-                console.log(txtUsername7);
-                var paPassword7 = document.querySelectorAll(".clsInput")[1].value;
-                console.log(paPassword7);
+        obj = {
+            id: 1000,
+            name: "Dinesh",
+            active: true,
         }
+        document.getElementById("btnClick").addEventListener("click", () => {
+            // localStorage.setItem("data", JSON.stringify(obj))
+            sessionStorage.setItem("data", JSON.stringify(obj))
+        });
+
+        document.getElementById("btnOpen").addEventListener("click", () => {
+            // let temp = localStorage.getItem("data");
+            let temp = sessionStorage.getItem("data");
+            if(temp) temp = JSON.parse(temp);
+            console.log(temp);
+            console.log(typeof temp);
+        });
+
+        document.getElementById("btnDelete").addEventListener("click", () => {
+            // localStorage.removeItem("data");
+            // console.log(localStorage.getItem("data"));
+
+            sessionStorage.removeItem("data");
+            console.log(sessionStorage.getItem("data"));
+        });
+
+
+        // document.getElementById("btnClick").addEventListener("click", () => {
+        //     // // Traditional Method
+        //     // var div1 = document.getElementById("div1").innerText;
+        //     // console.log(div1);
+        //     // var div2 = document.getElementById("div2").innerText;
+        //     // console.log(div2);
+
+        //     // var div11 = document.getElementById("div1").innerHTML;
+        //     // console.log(div11);
+        //     // var div21 = document.getElementById("div2").innerHTML;
+        //     // console.log(div21);
+
+        //     // var div11 = document.getElementsByClassName("clsDiv")[0].innerHTML;
+        //     // console.log(div11);
+        //     // var div21 = document.getElementsByClassName("clsDiv")[1].innerHTML;
+        //     // console.log(div21);
+
+        //     // document.getElementById("results").innerHTML = div21;
+
+        //     let rows = parseInt(document.getElementById("rows").value);
+        //     let cols = parseInt(document.getElementById("cols").value);
+        //     console.log(typeof rows);
+        //     console.log(typeof cols);
+        //     let output = "";
+        //     output += "<table border=1>";
+        //     for(let i=0; i<rows; i++) {
+        //         output += "<tr>";
+        //         for(let j=0; j<cols; j++) {
+        //             output += "<td>"+j+"</td>";
+        //         }
+        //         output += "</tr>";
+        //     }
+        //     output += "</table>";
+
+        //     document.getElementById("results").innerHTML = output;
+        // })
+        
+
+        // function testFunc() {
+        //     // console.log("this function is invoked by button click");
+
+        //     // old method
+        //         // document.<form name>.<form control name>.value
+        //         var txtUsername = document.frmLogin.txtUsername.value;
+        //         console.log(txtUsername);
+        //         var paPassword = document.frmLogin.paPassword.value;
+        //         console.log(paPassword);
+
+        //         // document.forms[0].<form control name>.value
+        //         var txtUsername1 = document.forms[0].txtUsername.value;
+        //         console.log(txtUsername1);
+        //         var paPassword1 = document.forms[0].paPassword.value;
+        //         console.log(paPassword1);
+
+        //     // traditional method
+        //         // document.getElementById(<id attribute>).value
+        //         var txtUsername2 = document.getElementById("idUsername").value;
+        //         console.log(txtUsername2);
+        //         var paPassword2 = document.getElementById("idPassword").value;
+        //         console.log(paPassword2);
+
+        //         // document.getElementsByClassName(<class attribute>)[].value
+        //         var txtUsername3 = document.getElementsByClassName("clsInput")[0].value;
+        //         console.log(txtUsername3);
+        //         var paPassword3 = document.getElementsByClassName("clsInput")[1].value;
+        //         console.log(paPassword3);
+
+        //         // document.getElementsByTagName(<name of the tag>)[].value
+        //         var txtUsername4 = document.getElementsByTagName("input")[0].value;
+        //         console.log(txtUsername4);
+        //         var paPassword4 = document.getElementsByTagName("input")[1].value;
+        //         console.log(paPassword4);
+
+        //         // document.getElementsByName(<name attribute>)[].value
+        //         var txtUsername5 = document.getElementsByName("txtUsername")[0].value;
+        //         console.log(txtUsername5);
+        //         var paPassword5 = document.getElementsByName("paPassword")[0].value;
+        //         console.log(paPassword5);
+
+        //     // modern methods
+        //         // document.querySelector(<selector>).value
+        //         var txtUsername6 = document.querySelector(".clsInput").value;
+        //         console.log(txtUsername6);
+        //         var paPassword6 = document.querySelector("#idPassword").value;
+        //         console.log(paPassword6);
+                
+        //         // document.querySelectorAll(<selector>)[].value
+        //         var txtUsername7 = document.querySelectorAll(".clsInput")[0].value;
+        //         console.log(txtUsername7);
+        //         var paPassword7 = document.querySelectorAll(".clsInput")[1].value;
+        //         console.log(paPassword7);
+        // }
     </script>
 </body>
 </html>

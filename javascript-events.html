@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div2 {
+            width: 200px;
+            height: 200px;
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div id="parentDiv">
+        <div id="circle" class="fa fa-circle">Circle</div>
+        <div id="triangle" class="fa fa-triangle">Triangle</div>
+        <div id="square" class="fa fa-square">Square</div>
+    </div> -->
+
+    <!-- <textarea id="taMessage"></textarea>
+    <div id="count"></div> -->
+
+    <!-- <div id="div1">Div Container</div> -->
+
+    <!-- <div id="div2"></div>
+    <div id="div3"></div> -->
+
+    <!-- Subjects:<br>
+    <input type="checkbox" name="chkSubjects" value="HTML"> HTML<br>
+    <input type="checkbox" name="chkSubjects" value="CSS"> CSS<br>
+    <input type="checkbox" name="chkSubjects" value="JS"> JS<br>
+    <input type="checkbox" name="chkSubjects" value="React"> React<br>
+    <input type="checkbox" name="chkSubjects" value="Node"> Node<br>
+    <input type="button" value="Click" id="btnClick"> -->
+
+    <!-- Cities:<br>
+    <select id="cities">
+        <option value="1">Chennai</option>
+        <option value="2">Mumbai</option>
+        <option value="3">Kolkata</option>
+        <option value="4">Bengaluru</option>
+    </select>
+    <br><br>
+
+    State:<br>
+    <select id="state">
+        <option value="1">Tamilnadu</option>
+        <option value="2">Maharastra</option>
+        <option value="3">West Bengal</option>
+        <option value="4">Karnataka</option>
+    </select> -->
+
+    <input type="text" id="txtEmail" placeholder="Email"><br>
+    <input type="text" id="txtPhone" placeholder="Phone"><br>
+    <input type="text" id="txtPassword" placeholder="Password"><br>
+
+    <input type="button" id="btnClick" value="Validate">
+
+    <script>
+        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+{1,50}$/;
+        var phoneFormat = /^\d{16}$/;
+        var passwordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+
+        document.getElementById("btnClick").addEventListener("click", () => {
+            let txtEmail = document.getElementById("txtEmail");
+            let txtPhone = document.getElementById("txtPhone");
+            let txtPassword = document.getElementById("txtPassword");
+
+            console.log(mailFormat.test(txtEmail.value));
+            console.log(phoneFormat.test(txtPhone.value));
+            console.log(passwordFormat.test(txtPassword.value));
+        });
+
+        // let txt1 = document.getElementById("txt1");
+        // txt1.focus();
+
+        // document.getElementById("txt2").addEventListener("focus", () => {
+        //     let txt2 = document.getElementById("txt2");
+        //     if(txt2.value === "") {
+        //         txt2.setAttribute("style", "background-color: red; color: white");
+        //         txt2.focus();
+        //     } else {
+        //         txt2.setAttribute("style", "background-color: green; color: white");
+        //     }
+        // });
+        // document.getElementById("txt2").addEventListener("blur", () => {
+        //     let txt2 = document.getElementById("txt2");
+        //     if(txt2.value === "") {
+        //         txt2.setAttribute("style", "background-color: red; color: white");
+        //         txt2.focus();
+        //     } else {
+        //         txt2.setAttribute("style", "background-color: green; color: white");
+        //     }
+        // });
+
+        // document.getElementById("cities").addEventListener("change", () => {
+        //     document.getElementById("state").value = document.getElementById("cities").value;
+        // });
+
+        // document.querySelector("#btnClick").addEventListener("click", () => {
+        //     let chkSubjects = document.getElementsByName("chkSubjects");
+        //     console.log(chkSubjects.length);
+        //     // for(let temp in chkSubjects) {
+        //     //     if(chkSubjects[temp].checked)
+        //     //         console.log(chkSubjects[temp].value);
+        //     // }
+        //     // chkSubjects.filter(v => v.checked);
+        // });
+
+        // document.getElementById("div2").addEventListener("mousemove", (event)=>{
+        //     let x = event.clientX;
+        //     let y = event.clientY;
+        //     document.getElementById("div3").innerHTML = "X - "+x+", Y - "+y;
+        // });
+
+        // document.getElementById("div1").addEventListener("mouseenter", ()=>{
+        //     document.getElementById("div1").innerText = "Mouseover is triggered";
+        // });
+        // document.getElementById("div1").addEventListener("mouseleave", ()=>{
+        //     document.getElementById("div1").innerText = "Mouseout is done";
+        // });
+        // document.getElementById("taMessage").addEventListener("keyup", () => {
+        //     document.getElementById("count").innerText = document.getElementById("taMessage").value.length;
+        // });
+
+        // document.getElementById("circle").addEventListener("click", () => {
+        //     console.log("circle is clicked");
+        // });
+        // document.getElementById("triangle").addEventListener("click", () => {
+        //     console.log("triangle is clicked");
+        // });
+        // document.getElementById("square").addEventListener("click", () => {
+        //     console.log("square is clicked");
+        // });
+
+        // document.getElementById("parentDiv").addEventListener("click", (event) => {
+        //     console.log(event);
+        // });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="results"></div>
+
+    <button id="btnRefresh">Refresh</button>
+
+    <script type="module">
+        // import {data, data1} from "./students.js";
+        // console.log(data);
+        // console.log(data1);
+
+        // import data from "./student.json" assert { type: 'json' };
+        // console.log(data.students);
+
+        // fetch("./student.json")
+        //     .then(data => data.json())
+        //     .then(finalres => console.log(finalres.students));
+        // console.log(results);
+
+        document.querySelector("#btnRefresh").addEventListener("click", () => {
+            // fetch("https://catfact.ninja/fact")
+            // .then(data => data.json())
+            // .then(data => {
+            //     console.log(data);
+            //     let output = "";
+            //     output += "<div>Fact: "+data.fact+"</div>";
+            //     output += "<div>Length: "+data.length+"</div>";
+
+            //     document.querySelector("#results").innerHTML = output;
+            // });
+        });
+    </script>
+    
+</body>
+</html>
